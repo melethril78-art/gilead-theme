@@ -1,1 +1,61 @@
-/* Fiche globale */
+/*==================================================
+        GILEAD - FICHE GLOBALE
+==================================================*/
+
+:root{
+
+    --gold:#c6a46a;
+    --gold-light:rgba(198,164,106,.35);
+
+    --bg:#050505;
+    --bg2:#0b0b0b;
+    --bg3:#121212;
+
+    --txt:#d6d0c6;
+    --txt2:#9f9788;
+
+    --red:#7f1111;
+
+}
+
+/************************************************/
+
+.gilead-document{
+
+    width:min(740px,95%);
+
+    margin:40px auto;
+
+    background:
+    linear-gradient(180deg,#111,#050505);
+
+    border:1px solid var(--gold);
+
+    position:relative;
+
+    overflow:hidden;
+
+    color:var(--txt);
+
+    font-family:Georgia,serif;
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,.8);
+
+}
+
+/************************************************/
+
+.gilead-document::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:8px;
+
+    border:1px solid var(--gold-light);
+
+    pointer-events:none;
+
+}
