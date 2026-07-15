@@ -1,4 +1,4 @@
-alert("Le JavaScript GitHub fonctionne !");
+
 const headers=[
 "https://i.servimg.com/u/f51/20/60/27/40/fiche_10.png",
 "https://i.servimg.com/u/f51/20/60/27/40/header10.png",
