@@ -1,23 +1,23 @@
-const headers = [
+const headers=[
 "https://i.servimg.com/u/f51/20/60/27/40/fiche_10.png",
 "https://i.servimg.com/u/f51/20/60/27/40/header10.png",
 "https://i.servimg.com/u/f51/20/60/27/40/header11.png",
 "https://i.servimg.com/u/f51/20/60/27/40/header12.png"
 ];
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded",function(){
 
     const header=document.querySelector(".gilead-header");
 
     if(!header) return;
 
-    headers.forEach((url,i)=>{
+    headers.forEach(function(url,index){
 
         const img=document.createElement("img");
 
         img.src=url;
 
-        if(i===0) img.classList.add("active");
+        if(index===0) img.classList.add("active");
 
         header.appendChild(img);
 
@@ -27,14 +27,16 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     let current=0;
 
-    setInterval(()=>{
+    setInterval(function(){
 
         images[current].classList.remove("active");
 
-        current=(current+1)%images.length;
+        current++;
+
+        if(current>=images.length) current=0;
 
         images[current].classList.add("active");
 
-    },8000);
+    },5000);
 
 });
